@@ -1,0 +1,206 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background:url(cdo.png) no-repeat fixed center;
+	background-size: cover;
+	background-position: center;
+
+}
+.logo img
+{
+
+	width: 210px;
+	height: 100px;
+    position: absolute;
+    box-shadow: 0px 15px 30px black;
+    border-radius: 10px;
+    top: 0;
+    left: 55px;
+}
+.logo h1
+{
+  font-size: 1em;
+  text-align: center;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  text-shadow: 0px 1px 1px black;
+  color:#0C0078 ;
+  top: 110px;
+  left: 14px;
+
+}
+.box
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	padding: 40px;
+	background: linear-gradient(to bottom,rgba(4,8,125,1) ,rgba(161,91,0,1) );
+	box-shadow: 12px 18px 20px black;
+	border-radius: 10px;
+}
+.box h1
+{
+
+	text-align: center;
+	color: #03a9f4;
+	font-size: 40px;
+
+}
+.box .inputbox
+{
+	position: relative;
+}
+
+.inputbox input
+{
+	width: 100%;
+	padding: 10px 0px;
+	font-size: 18px;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin-bottom: 30px;
+	background: transparent;
+	border-bottom: 2px solid yellow;
+
+}
+.box .inputbox label
+{
+	position: absolute;
+	top: 0;
+	left:0;
+	padding: 10px 0px;
+	font-size: 20px;
+	color: yellow;
+    pointer-events: none;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+.inputbox input:focus ~ label, 
+.inputbox input:valid ~ label
+{
+  top: -30px;
+  color: #03a9f4;
+}
+
+.inputbox input:hover 
+{
+  color: #03a9f4;
+  border-bottom-color: #03a9f4;
+}
+
+.selectionbox label
+{
+	font-size: 20px;
+	color: yellow;
+    letter-spacing: 1px;
+}
+
+/*******************/
+.avatar{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: -50px;
+	left: 165px;
+}
+select
+{
+	
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    -ms-appearance:none;
+	appearance:none;
+	display: block;
+	padding: 8px 10px;
+	width: 350px;
+	margin-top: 4px;
+	background: url(flech.png) no-repeat 98.60% center;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+    box-shadow: 0px 4px 6px black;
+    outline: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select:hover
+{
+	
+	
+	background: url(flech2.png) no-repeat 98.60% center;
+	background-color: #03a9f4;
+    font-weight: bold;
+}
+option
+{
+	font-size: 1.4em;	
+}
+a
+{
+	text-decoration: none;
+	color: #03a9f4;
+	margin-left: 50px;
+	font-style: italic;
+}
+a:hover
+{
+ text-decoration: underline;
+}
+a:active
+{
+ color: yellow;
+}
+label[for="remember-me"]
+{
+  color: yellow;
+  font-style: italic;
+  
+}
+input[type="checkbox"]
+{
+	cursor: pointer;
+	margin-left: -1px;
+}
+#button
+{
+
+  border:none; 
+  background: #03a9f4;
+  color: #fff;	
+  font-size: 25px;
+  margin-top: 12px;
+  margin-left: 110px;
+  width:140px;
+  height: 50px;
+  box-shadow: 0px 6px 6px black;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+  
+}
+
+#button:hover
+{
+  background: /*linear-gradient(to bottom,rgba(102,255,122,0.5) ,rgba(00,209,28,1) ); */black;
+  color: #03a9f4;
+  font-weight: bold;
+  box-shadow: 0px 6px 12px #03a9f4;
+  width: 190px;
+  margin-left: 80px;
+}
+#button:active
+{
+	box-shadow: 0px 6px 12px yellow;
+}
+
+

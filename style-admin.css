@@ -1,0 +1,641 @@
+body
+{
+	background: url(admin_background.jpg) no-repeat fixed center;
+	background-size: cover;
+}
+#user
+{
+	position: relative;
+	top: -20px;
+	color: #0022BA;
+	text-align: center;
+	text-shadow: -2px 0px 4px black;
+}
+#user span
+{
+  color: black;
+  text-shadow: -2px 2px 4px black;
+}
+#logo
+{
+	position: absolute;
+   top: 20%;
+   left: 20%;
+   z-index: 1
+}
+
+nav
+{
+    position: absolute;
+    left: 290px;
+    top: 18px;
+	z-index: 3;
+    width: 1000px;
+    height: 100px
+    
+}
+
+ul
+{
+    padding-left: 0px;
+	list-style-type: none;
+}
+
+ul[id="shown"]
+{
+    position: absolute;
+	display: flex;  
+}
+
+
+.box
+{
+
+	width: 220px;
+	height: 65px;
+    position: relative;
+    top: -5px;
+    left: 15px;
+	border: 1px solid #bcbcbc;
+	border-radius: 2px;
+	background: linear-gradient(to bottom, rgba(255,255,255,1),  rgba(232,232,232,1));
+	box-shadow: 0px 3px 5px 1px black;
+	margin-right: 2px;
+	transition: .5s;
+}
+
+a
+{
+	text-decoration: none;
+	font-family: arial black;
+	position: absolute;
+    left: 28px;
+    top:9px;
+	color: #0022BA;
+
+	
+}
+.box:hover
+{
+	text-decoration: none;
+	background: linear-gradient(to bottom, rgba(232,232,232,1),rgba(255,255,255,1));
+    box-shadow: 0px 3px 2px  black;
+}
+
+.box:hover a
+{
+	color: black;
+
+}
+
+#pos2
+{
+	top: 20px;
+	left: 25px;
+}
+
+svg
+{
+	position: relative;
+	top: 1px;
+	left: 144px;
+	cursor: pointer;
+}
+.box:hover svg g path
+{
+	fill:black;
+}
+
+.box li
+{
+	cursor: pointer;
+}
+
+/********************* add_user_page************************/
+/******************************************************************************************************************************
+****************************************************************************************************************************************************
+******************************************************************************************************************************
+******************************************************************************************************************************/
+.conteneur_add_user,#all_users_container
+{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 1000px;
+	border-radius: 40px;
+	padding: 40px;
+	background: linear-gradient(to bottom,rgba(4,8,125,1) ,rgba(214,122,2,0.95) );
+	box-shadow: 12px 18px 20px black;
+	border-radius: 10px;
+	z-index: 2;
+	height: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	transition: .5s;
+}
+.conteneur_add_user h1
+{ 
+	text-align: center;
+	color: #03a9f4;
+	font-size: 30px;
+	position: relative;
+	top: -40px;
+	left:0;
+}
+.inputbox
+{
+	margin-top: -10px;
+}
+.inputbox input 
+{
+	width: 100%;
+	padding: 10px 0px;
+	font-size: 18px;
+	color: #fff;
+	border: none;
+	outline: none;
+	margin-bottom: 30px;
+	background: transparent;
+	border-bottom: 2px solid yellow;
+}
+.inputbox  label
+{
+  	position: relative;
+	top: -66px;
+	left:0;
+	padding: 10px 0px;
+	font-size: 20px;
+	color: yellow;
+    pointer-events: none;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+ .inputbox input:focus ~ label,
+ .inputbox input:valid ~ label
+{ 
+  font-size:25px;
+  top: -98px;
+  color: #03a9f4;
+}
+.inputbox input:hover 
+{
+  color: #03a9f4;
+  border-bottom-color: #03a9f4;
+}
+.selectionbox
+{ 
+
+	position: absolute;
+}
+.selectionbox label
+{
+
+	font-size: 30px;
+	color: yellow;
+    letter-spacing: 1px;
+   
+}
+.selectionbox label:hover
+{
+	font-size: 30px;
+	color: #03a9f4;
+    letter-spacing: 1px;
+}
+
+select
+{
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    -ms-appearance:none;
+	appearance:none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	padding: 8px 10px;
+	width: 400px;
+	margin-top: 4px;
+	background: url(flech.png) no-repeat 98.60% center;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
+    box-shadow: 0px 4px 6px black;
+    outline: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: .5s;
+}
+select:hover
+{
+	
+	background: url(flech2.png) no-repeat 98.60% center;
+	background-color: #03a9f4;
+    font-weight: bold;
+} 
+option
+{
+	font-size: 1.4em;	
+}
+#button
+{
+
+  border:none; 
+  background: #03a9f4;
+  color: #fff;	
+  font-size: 25px;
+  box-shadow: 0px 10px 6px black;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: .5s;
+  width: 160px;
+ height: 50px;
+ margin-left: 428px;
+ margin-top: 112px;
+  
+}
+#button:hover
+{
+  position: absolute;
+  background: black;
+  color: #03a9f4;
+  font-weight: bold;
+  box-shadow: 0px 6px 12px #03a9f4;
+  width: 200px;	
+  height: 62px;
+   margin-left: 400px;
+}
+#button:active
+{
+box-shadow: 0px 6px 12px yellow;
+}
+.operation_succes
+{
+	position: absolute;
+	top: 79.50%;
+	left: 60%;
+	z-index: 3;
+	color:rgba(55,255,0,1);
+	text-shadow: 0px 6px 6px black;
+	animation-name: anim;
+	animation-duration: 4s;	
+	font-style: italic;
+}
+
+.operation_succes img
+{
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+.operation_fail
+{
+    
+	
+	position: absolute;
+	top: 79.50%;
+	left: 57%;
+	z-index: 3;
+	color:#CF060A;
+	text-shadow: 0px 2px 6px black;
+	animation-name: anim;
+	animation-duration: 4s;	
+	font-style: italic;	
+	
+	
+}
+.operation_fail img
+{
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+
+
+@keyframes anim{
+    from {text-shadow: 20px 10px 6px black; font-size: 1.3em;}
+    to {text-shadow:0px 2px 6px black;}
+}
+
+
+/********************* rechercher_utilisateur***********************/
+/******************************************************************************************************************************
+****************************************************************************************************************************************************
+******************************************************************************************************************************
+******************************************************************************************************************************/
+#users-container
+{
+ height: 750px;
+ width: 1400px;
+ position: absolute;
+ top: 65%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ padding: 10px;
+ background: linear-gradient(to bottom,rgba(4,8,125,1) ,rgba(214,122,2,0.95) );
+ z-index: 1;
+}
+#users-container h3
+{
+    display: inline;
+	width: 350px;
+	text-align: center;
+	position: relative;
+	top: 60px;
+	left: 30px;
+	color: #03a9f4;
+}
+#search-box
+{
+	width: 600px;
+	position: relative;
+	top: 15px;
+	left:762px;
+	z-index: 2;
+}
+#search-box button
+{
+	position: relative;
+	top: 2px;
+	left: 84%;
+	border: none;
+	outline: none;
+	border-left: none;
+	background: rgba(0,0,0,0.5);
+	border-radius: 4px;
+	height: 40px;
+	width: 100px;
+	z-index: 2;
+}
+#search-box button img
+{
+	position: relative;
+	top: 2px;
+}
+
+#search
+{
+  border:1px solid black;
+  position: relative;
+  top: 0px;
+  left: 175px;
+  border-radius: 4px;
+  width: 303px;
+  height: 22px;
+  padding: 8px;
+  background:#2F3640;
+  color: white; 
+   font-weight: bold;
+   letter-spacing: 1px;
+  transition: .5s;
+}
+
+#search:hover,#search:focus
+{   
+	box-shadow: 0px 0px 10px 0.5px black;
+	outline: none;
+	width:474px;
+	left: 5px;
+}
+#search-box button:hover
+{
+ background:black;
+}
+#search-box button:active
+{
+ border:1px solid orange;
+}
+
+#results
+{
+	position: relative;
+}
+#results div
+{
+  position: relative;
+  top: 5px;
+  left: 112px;
+  width:485px;
+  padding: 4px;
+  background:white;
+  font-weight:normal;
+  font-size: 0.6em;
+  color: black; 
+  text-shadow:0px 1px 2px black;
+}
+#results div:hover/* result focus pour manipuler les resultat de recherches*/
+{
+ background:orange;
+ color: black;
+}
+#filter
+{
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	position: relative;
+	top: 10px;
+	left: 965px;
+	font-size: 0.7em;
+	color: orange;
+	z-index: 3;
+}
+#table
+{
+	position: absolute;
+	top: 150px;
+	left: 10px;
+	font-size: 0.6em;
+   
+}
+table
+{
+	  width: 1400px;
+	  text-align: center;
+	  border-collapse: collapse;
+	  background:#E36600;
+}
+td
+{
+	border:1px solid black;
+}
+th
+{
+	background: black;
+	color:#03a9f4; 
+}
+th img
+{
+	position: relative;
+	left: 10px;
+	top: 3.5px;
+}
+th span
+{
+	position: relative;
+	top: -3px;
+}
+tr:hover
+{
+	background: orange;
+	text-shadow: 0px 2px 1px  black;
+}
+#precedent,#suivant
+{
+  font-size: 25px;
+  box-shadow: 3px 5px 4px black;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 140px;
+  height: 50px; 
+  margin-top: 10px;
+  transition: .5s;
+}
+#precedent
+{
+    position: absolute;
+	left:-1px;
+}
+#suivant
+{
+	position: absolute;
+	left: 1261px;
+}
+#precedent[disabled],#suivant[disabled]
+{
+ box-shadow:none;
+}
+#precedent:hover,#suivant:hover
+{
+
+  background: black;
+  color: #03a9f4;
+  font-weight: bold;
+  height: 54px;
+}
+#precedent[disabled]:hover ,#suivant[disabled]:hover
+{
+  box-shadow: none;
+  background:#cccccc;
+  color: grey;
+  height: 50px; 
+}
+#noresultdiv
+{
+	position: relative;
+	font-size: 2em;
+	color: red;
+	top: 100px;
+	left: 85px;
+	text-shadow: 0px 3px 2px black;
+
+}
+#inputUser
+{
+
+ border:none;
+ outline: none;
+ font-size: 0.9em;
+ height: 25px;
+ padding: 2px;
+ font-weight: bold;
+ text-shadow: 0px 2px 1px  black;
+}
+
+.erreur-interface
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding-top:80px;
+    padding-bottom: 40px;
+	transform: translate(-50%,-50%);
+	background: linear-gradient(to bottom,rgba(0,3,163,0.9),rgba(0,0,0,1));
+	width: 700px;
+	z-index: 4;
+	height: 180px;
+	color: red;
+	text-shadow: 0px 3px 2px black;
+	font-size: 1.8em;
+	text-align: center;
+	border-radius: 10px;
+	border:1px double black;
+	box-shadow: 0px 5px 18px 4px black;
+}
+#erreurOk
+{
+	position: absolute;
+	top: 65%;
+	left: 39%;
+	border-radius: 5px;
+	width: 160px;
+	height: 50px;
+	font-size: 0.8em;
+	font-weight: bold;
+	background: linear-gradient(to bottom,rgba(125,125,125,1),rgba(207,207,207,1)); 
+}
+#erreurOk:hover
+{
+  background: linear-gradient(to bottom,rgba(191,191,191,1),rgba(255,255,255,1)); 	
+}
+#backgroundDiv
+{
+    width: 1500px;
+    height: 985px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+#mdfProfile
+{
+ position: relative;
+ top: -2px;
+ left: 0px;
+ width: 200px;
+
+}
+
+.modify-user,.modify-password,.modify-profile,.rubbish-bin
+{
+	cursor: pointer;
+}
+.modify-date_inscription,.modify-date_last_connexion
+{
+	cursor: not-allowed;
+	background: #CCCCCC;
+}
+
+#confirmOk,#annuler
+{
+    background: linear-gradient(to bottom,rgba(130,130,130,1),rgba(207,207,207,1)); 
+	height: 60px;
+	width: 150px;
+	margin:20px;
+	font-size: 0.9em;
+	font-weight: bold;
+	border-radius: 4px;
+}
+#confirmOk:hover,#annuler:hover
+{
+
+ background: linear-gradient(to bottom,rgba(191,191,191,1),rgba(255,255,255,1)); 
+}
+#annuler
+{
+	 position: absolute;
+	 top: 60%;
+	 left: 57%;
+}
+#confirmOk
+{
+	 position: absolute;
+	 top: 60%;
+	 left: 15%;
+
+}
+
+
